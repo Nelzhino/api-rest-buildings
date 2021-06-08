@@ -1,7 +1,5 @@
 package com.constructora.mundoFuturo.dto;
 
-import java.util.List;
-
 import lombok.AccessLevel;
 import lombok.AllArgsConstructor;
 import lombok.Getter;
@@ -14,11 +12,10 @@ import lombok.experimental.FieldDefaults;
 @Getter
 @Setter
 @FieldDefaults(level = AccessLevel.PRIVATE)
-public class MaterialTipoConstruccionDTO {
+public class MaterialDTO {
 
-	Long idSolicitud;
+	String material;
 	
-	String contruccion;
+	int cantidad;
 	
-	List<MaterialDTO> materiales;
 }

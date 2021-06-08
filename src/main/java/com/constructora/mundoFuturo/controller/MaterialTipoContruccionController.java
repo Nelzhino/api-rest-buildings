@@ -6,22 +6,22 @@ import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
-import com.constructora.mundoFuturo.dto.OrdenConstruccionDTO;
+import com.constructora.mundoFuturo.dto.MaterialTipoConstruccionDTO;
 import com.constructora.mundoFuturo.dto.ResponseDTO;
 import com.constructora.mundoFuturo.exceptions.AplicacionException;
-import com.constructora.mundoFuturo.services.IOrdenConstruccionService;
-
+import com.constructora.mundoFuturo.services.IMaterialTipoContruccionService;
 
 @RestController
-@RequestMapping(value = "/orden")
-public class OrdenConstruccionController {
+@RequestMapping(value = "/material")
+public class MaterialTipoContruccionController {
+
 	
 	@Autowired
-	private IOrdenConstruccionService ordenConstruccionService;
+	private IMaterialTipoContruccionService materialTipoContruccionService;
 	
 	@PostMapping("/generar")
-	public ResponseDTO generarOrden(@RequestBody OrdenConstruccionDTO ordenConstruccionDTO) throws AplicacionException{
-		return this.ordenConstruccionService.registrar(ordenConstruccionDTO);
+	public ResponseDTO generar(@RequestBody MaterialTipoConstruccionDTO materialTipoConstruccionDTO) throws AplicacionException {
+		return this.materialTipoContruccionService.registrar(materialTipoConstruccionDTO);
 	}
-
+	
 }
