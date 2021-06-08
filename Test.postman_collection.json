@@ -1,0 +1,137 @@
+{
+	"info": {
+		"_postman_id": "a6723769-24ed-4976-b482-d3075729dd7c",
+		"name": "Test",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "solictud-generar",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"coordenadaX\": 60,\n    \"coordenadaY\": 2,\n    \"cedula\": \"1143940232\",\n    \"tipoContrucccion\": \"GIMNASIO\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/solicitud/generar",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"solicitud",
+						"generar"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "order-generar",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"idSolicitudConstruccion\": 18\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/orden/generar",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"orden",
+						"generar"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "exportar-reporte",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/solicitud/exportar/reporte",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"solicitud",
+						"exportar",
+						"reporte"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "proyecto-fechaFinal",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/proyecto/verFechaFinalizacion",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"proyecto",
+						"verFechaFinalizacion"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "material - generar",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"idSolicitud\": 13,\n    \"materiales\": [\n        {\n            \"material\": \"CE\",\n            \"cantidad\": 200\n        },\n        {\n            \"material\": \"GR\",\n            \"cantidad\": 150\n        },\n        {\n            \"material\": \"AR\",\n            \"cantidad\": 60\n        },\n        {\n            \"material\": \"MA\",\n            \"cantidad\": 30\n        },\n        {\n            \"material\": \"AD\",\n            \"cantidad\": 20\n        }\n    ]\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/material/generar",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"material",
+						"generar"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
